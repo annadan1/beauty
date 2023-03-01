@@ -1,0 +1,21 @@
+@import "header.scss";
+@import "main.scss";
+@import "specialOffers.scss";
+@import "addressesBlock.scss";
+@import "footer.scss";
+@import "_variables.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+button {
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background: none;
+  color: $myblack;
+  &:hover {
+    color: $mygreen;
+  }
+}

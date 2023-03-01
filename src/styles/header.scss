@@ -1,0 +1,136 @@
+@import "_variables.scss";
+
+.header__topline {
+  background-color: $mygrey;
+  display: flex;
+  justify-content: center;
+  & button {
+    font-size: 14px;
+    padding: 17px 15px;
+  }
+}
+
+.header__secondline {
+  padding: 20px $left_and_rigth_padding;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $mygrey;
+}
+
+.header__secondline__logo {
+  color: $mygreen;
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+  @extend %RobotoBold;
+}
+.header__secondline__callback {
+  @extend %RobotoRegular;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & button {
+    margin-left: 40px;
+    @include buttonBorder($mygreen, $mygreen);
+  }
+}
+.header__thirdline {
+  display: flex;
+  justify-content: center;
+  & button {
+    font-size: 16px;
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 1399px) {
+  .header__secondline__logo {
+    font-size: 30px;
+    & img {
+      height: 70px;
+      width: 70px;
+    }
+  }
+}
+
+@media (max-width: 1027px) {
+  .header__secondline__logo {
+    font-size: 26px;
+    & img {
+      height: 60px;
+      width: 60px;
+    }
+  }
+  .header__thirdline {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    padding: 0 $left_and_rigth_padding;
+    & button {
+      padding: 15px 5px;
+    }
+  }
+  .header__secondline__callback {
+    &.header__secondline__callback__phone {
+      font-size: 12px;
+    }
+    & button {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .header__secondline {
+    padding: 20px 50px;
+  }
+  .header__secondline__logo {
+    font-size: 20px;
+    & img {
+      height: 35px;
+      width: 35px;
+    }
+  }
+  .header__secondline__callback {
+    & .header__secondline__callback__phone {
+      font-size: 16px;
+    }
+    & button {
+      margin-left: 15px;
+    }
+  }
+  .header__thirdline {
+    padding: 0 50px;
+    & button {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .header__secondline {
+    padding: 10px;
+    .header__secondline__callback {
+      & .header__secondline__callback__phone {
+        font-size: 12px;
+      }
+      & button {
+        margin-left: 10px;
+      }
+    }
+  }
+  .header__thirdline {
+    padding: 10px;
+    & button {
+      font-size: 14px;
+    }
+  }
+  .header__topline {
+    & button {
+      font-size: 10px;
+      padding: 15px 12px;
+    }
+  }
+}

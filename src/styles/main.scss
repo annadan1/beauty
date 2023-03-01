@@ -1,0 +1,45 @@
+@import "_variables.scss";
+
+.main {
+  background: $mygreen center url(../assets/image/Rectangle\ 2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 604px;
+  padding: 0 $left_and_rigth_padding;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  & h1 {
+    @extend %RobotoBold;
+    font-size: 44px;
+  }
+  & p {
+    @extend %RobotoRegular;
+    font-size: 14px;
+  }
+  & button {
+    @include buttonBorder(white, white);
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .main {
+    height: 404px;
+    padding: 0 50px;
+    & h1 {
+      font-size: 35px;
+    }
+    & p {
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .main {
+    height: 404px;
+    padding: 0 10px;
+  }
+}
